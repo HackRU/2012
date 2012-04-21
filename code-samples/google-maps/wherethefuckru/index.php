@@ -3,8 +3,11 @@
 	 * It hits Google Maps for directions between an address and specified Rutgers bus stops, and tells you which Rutgers bus stop is closest.
      * It uses the Google Maps Javascript API for directions.
 	 */
-	$apikey='AIzaSyBFCdq0tMeKhbcP1DFT-bsNGrBrF2hDxyo';
+	$apikey='INSERT YOUR GOOGLE MAPS API KEY';
 
+
+
+	//Sample data from Nextbus
 	$stops = array (
 			array (
 				'tag' => 'scott',
@@ -62,13 +65,10 @@
 				Address<br />
 				<input id="address" type="text" name="address" value="<?=@ htmlentities($_REQUEST['address']); ?>" /><br />
 				<br />
-				Stops to search:<br />
+				Stops being searched:<br />
 				<?php
-					$default_search_stops = array();
-					if(isset($_REQUEST['search_stops']))
-						$default_search_stops = $_REQUEST['search_stops'];
 					foreach($stops as $stop) {
-						echo ' <input type="checkbox" '.((in_array($stop['stopId'], $default_search_stops)) ? 'checked="checked"' : '').' name="search_stops[]" value="'.$stop['stopId'].'"> &nbsp;&nbsp;&nbsp; '.$stop['title'].'<br />';
+						echo $stop['title'].'<br />';
 					}
 
 				?>
@@ -115,17 +115,9 @@
 					//we want to find results close to NB.
 					address += " near New Brunswick, NJ";
 
-					//get the checked stops.
-					var checkboxes = $(this).find(':checked');
-					var checked_boxes = [];
-
-					$.each(checkboxes, function(index, element) {
-						checked_boxes.push(element.value);
-					});
-
 					var geocoder = new google.maps.Geocoder();
 
-					//geocode this address.
+					//geocode this address - (get lat longs for it)
 					geocoder.geocode({'address': address}, function(results, status) {
 						if(status == google.maps.GeocoderStatus.OK) {
 							geocoded = results[0].geometry.location;
@@ -133,8 +125,10 @@
 							var table_div = $('#table_div');
 							table_div.html('');
 
+							//show the results in tabular format.
 							var table = $('<table>').appendTo('#table_div');
 							table.append('<tr><th>Stop</th><th>Distance</th><th>Walking Time</th></tr>');
+
 							$.each(stops, function(index, stop) {
 
 								var origin = geocoded;
@@ -161,6 +155,8 @@
 											mindistance = distance;
 											mindistance_text = info.distance.text;
 											minduration_text = info.duration.text;
+
+											//display the directions on the map.
 
 											directionsDisplay.setDirections(response);
 
