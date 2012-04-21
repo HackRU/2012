@@ -54,5 +54,17 @@ Now let's create a views.py and a home() function inside to handle this request.
 		if request.GET['hi']:
 			return HttpResponse('Wow, you know how to read parameters from the URL')
 		return HttpResponse("hello world")
-
 </pre>
+
+This will make it so that when you hit / without any parameters, you'll see "hello world".
+When you hit it with parameters you'll see "Wow you know how to read parameters..."
+
+For your hacks, you will probably want to use [django templates](http://www.djangobook.com/en/beta/chapter04/) to write your views instead of returning HttpResponse objects.
+
+#### Connecting to MongoDB
+
+Django does not support MongoDB officially (even though people have written some pretty good drivers for it).
+
+This means that if you're writing Database intensive code, you will probably want to use a MongoDB ORM for Python. I suggest using [mongoengine](https://github.com/hmarr/mongoengine).
+
+For examples on how to structure your Django, Mongo Application, you can take a look at [django-mumblr](https://github.com/hmarr/django-mumblr) or find me (Vaibhav).
