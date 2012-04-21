@@ -4,5 +4,5 @@ mapbooks.views """
 from django.conf.urls.defaults import patterns, include, url
 
 urlpatterns = patterns('',
-	url(r'^$', 'mapbook.views.home'),
+	url(r'^$', 'mapbook.views.home'), # Call the mapbook.views.home function when someone visits /
 )

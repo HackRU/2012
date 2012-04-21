@@ -15,7 +15,30 @@ You should be able to fire up a Python interpreter and run "import django", once
 
 ## Create your Django Project
 
-<tt> django-admin.py startproject project_name </tt>
+<tt> django-admin.py startproject <project_name> </tt>
 
 ## Understanding the Django Framework.
 
+Here are the files that the command generated:
+<pre>
+	__init__.py  
+	manage.py  
+	settings.py
+	urls.py
+</pre>
+
+urls.py is where everything in the Django web framework begins. 
+
+Django will attempt to match the urlpatterns in urls.py with the url that the user hits.
+
+Here is an example urls.py
+<pre>
+	""" This file configures the URL routes on your server. Currently it tells you that
+	whenever someone visits our site, they should be taken to the home() function in 
+	mapbooks.views """
+	from django.conf.urls.defaults import patterns, include, url
+
+	urlpatterns = patterns('',
+			url(r'^$', 'mapbook.views.home'), # Call the mapbook.views.home function when someone visits /
+	)
+</pre>
