@@ -1,4 +1,4 @@
-# [HackRu](http://www.hackru.org)
+# [HackRU](http://www.hackru.org)
 
 Visit the wiki for more information
 
