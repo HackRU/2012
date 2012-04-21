@@ -1,0 +1,11 @@
+foursquare API
+
+To Begin:
+	1) Make an account with foursquare
+	2) Go to https://foursquare.com/oauth/ to register your API and get an ID and a client secret.
+		-These will be needed when you try to query for data
+	3) Once you query, you will be returned a json encoded object which will later needed to be decoded
+
+There are also step by step instructions for dealing with OAuth : https://developer.foursquare.com/overview/auth
+
+There documentation page details your query options and ways to handle foursquare accounts: https://developer.foursquare.com/docs/
