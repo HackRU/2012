@@ -14,6 +14,7 @@
 
 ## Parameters:
 q: query
+
 format: output format (json or xml)
 
 	If format=='json', you can also pass:
