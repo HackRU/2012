@@ -14,13 +14,13 @@
 
 ## Parameters:
 q: query
-format: output format (json or xml)
-	If format=='json', you can also pass:
-		callback: function to callback (JSONP format)
-		pretty: 1 to make JSON look pretty (like JSONView for Chrome/Firefox)
-no\_redirect: 1 to skip HTTP redirects (for !bang commands).
-no\_html: 1 to remove HTML from text, e.g. bold and italics.
-skip\_disambig: 1 to skip disambiguation (D) Type.
+   format: output format (json or xml)
+   	If format=='json', you can also pass:
+   		callback: function to callback (JSONP format)
+   		pretty: 1 to make JSON look pretty (like JSONView for Chrome/Firefox)
+   no\_redirect: 1 to skip HTTP redirects (for !bang commands).
+   no\_html: 1 to remove HTML from text, e.g. bold and italics.
+   skip\_disambig: 1 to skip disambiguation (D) Type.
 
 
 ## Define Sample Code
