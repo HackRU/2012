@@ -1,4 +1,4 @@
-### Developing Web Applications in Python quickly with Django and MongoDB.
+# Developing Web Applications in Python quickly with Django and MongoDB.
 
 ## Installation 
 
@@ -61,7 +61,7 @@ When you hit it with parameters you'll see "Wow you know how to read parameters.
 
 For your hacks, you will probably want to use [django templates](http://www.djangobook.com/en/beta/chapter04/) to write your views instead of returning HttpResponse objects.
 
-#### Connecting to MongoDB
+## Connecting to MongoDB
 
 Django does not support MongoDB officially (even though people have written some pretty good drivers for it).
 
