@@ -1,0 +1,22 @@
+Demo apps:
+
+Ruby: https://github.com/movableink/ruby-demo
+PHP: https://github.com/movableink/php-demo
+Each contains instructions for deploying on Heroku and a live demo of the result.
+
+(sample python app)
+https://github.com/movableink/python-demo
+
+Apps built in the past:
+
+http://donorsig.com
+Shows the progress of your DonorsChoose projects in your email; when a project is completed it flips to the next one.
+
+http://musicsig.com
+Shows an animated music player in your email, synchronized with the music you're listening to via last.fm.
+
+http://foursig.herokuapp.com/
+Shows your latest Foursquare checkin, in your email signature.
+
+http://inboxsig.herokuapp.com
+Shows how many unread emails your inbox has, in your email signature.

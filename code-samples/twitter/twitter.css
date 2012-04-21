@@ -1,0 +1,14 @@
+a:visited, a:hover, a:link, a:active {
+	color: white;
+	text-decoration: none;
+}
+
+label {
+	display: inline;
+}
+
+.cute {
+	margin-left: 1px;
+	width: 13px;
+	height: 13px;
+}
